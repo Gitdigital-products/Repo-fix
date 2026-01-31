@@ -1,0 +1,15 @@
+# Repo-fix configuration file
+
+mode: pr            # options: commit | pr
+branch: repo-fix    # branch to use when mode=pr
+auto_merge: false   # if true, PRs are auto-merged when CI passes
+
+rules:
+  metadata: true     # enforce README, LICENSE, SECURITY.md, etc.
+  templates: true    # enforce issue templates, PR templates
+  workflows: true    # enforce CI workflows
+  docs: true         # enforce docs folder structure
+
+ignore:
+  - "docs/legacy/**" # glob patterns to skip
+  - ".github/old/**"
